@@ -1,0 +1,84 @@
+# lru_cache -- a chained hash table with bulk eviction.
+#
+# Why it is here: three allocation sites with three completely different
+# lifetime profiles, all interleaved.
+#   * the bucket array and the cache record   -- immortal
+#   * the entry nodes                         -- medium-lived, then all die at once
+#   * the key strings built by str()          -- some are retained by an entry,
+#                                                the rest die immediately
+# The last one is the interesting case: the same site produces both, and which
+# it is depends on whether the lookup hit.
+
+# `seed` and `scale` are injected by the harness (see halflife/eval/run.py).
+# scale=0 is the profiling variant, scale=1 the held-out evaluation variant:
+# same code, different input size and shape, so a model trained on one is
+# genuinely being tested on the other.
+
+fun rnd(limit) {
+  seed = (seed * 1103515245 + 12345) % 2147483648;
+  return seed % limit;
+}
+
+fun make_cache(nbuckets) {
+  let bs = [];
+  let i = 0;
+  while (i < nbuckets) {
+    push(bs, nil);
+    i = i + 1;
+  }
+  return record { buckets: bs, size: 0, cap: nbuckets, hits: 0, misses: 0 };
+}
+
+fun cache_get(c, key) {
+  let idx = hash(key) % c.cap;
+  let node = c.buckets[idx];
+  while (node != nil) {
+    if (node.key == key) {
+      c.hits = c.hits + 1;
+      return node.val;
+    }
+    node = node.next;
+  }
+  c.misses = c.misses + 1;
+  return nil;
+}
+
+fun cache_put(c, key, val) {
+  let idx = hash(key) % c.cap;
+  let node = record { key: key, val: val, next: c.buckets[idx] };
+  c.buckets[idx] = node;
+  c.size = c.size + 1;
+}
+
+# Bulk eviction: dropping every chain kills thousands of medium-lived objects
+# in one step, which is exactly the pattern a nursery handles badly.
+fun evict_all(c) {
+  let i = 0;
+  while (i < c.cap) {
+    c.buckets[i] = nil;
+    i = i + 1;
+  }
+  c.size = 0;
+}
+
+let cache = make_cache(256 + scale * 256);
+let ops = 0;
+let found = 0;
+
+while (ops < 9000 + scale * 4000) {
+  let k = str(rnd(2000 + scale * 2000));
+  let v = cache_get(cache, k);
+  if (v == nil) {
+    cache_put(cache, k, record { payload: ops, key: k });
+  } else {
+    found = found + 1;
+  }
+  if (cache.size > 1200 + scale * 500) {
+    evict_all(cache);
+  }
+  ops = ops + 1;
+}
+
+print("lru hits " + str(cache.hits));
+print("lru misses " + str(cache.misses));
+print("lru found " + str(found));

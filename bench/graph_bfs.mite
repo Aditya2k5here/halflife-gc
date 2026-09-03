@@ -1,0 +1,74 @@
+# graph_bfs -- an immortal data structure traversed by short-lived algorithms.
+#
+# Why it is here: the split between "the graph" and "the search" is perfectly
+# clean and perfectly predictable from the allocation site alone. This is the
+# workload where the dumb per-site table should already capture nearly all of
+# the available win -- and if the learned model does not at least match it here,
+# the learned model is broken.
+#
+# It also punishes a stock generational collector twice over: the graph is built
+# in one burst, so the whole thing survives its first nursery and is copied out
+# byte by byte, for nothing.
+
+# `seed` and `scale` are injected by the harness (see halflife/eval/run.py).
+# scale=0 is the profiling variant, scale=1 the held-out evaluation variant:
+# same code, different input size and shape, so a model trained on one is
+# genuinely being tested on the other.
+
+fun rnd(limit) {
+  seed = (seed * 1103515245 + 12345) % 2147483648;
+  return seed % limit;
+}
+
+fun build_graph(n, degree) {
+  let nodes = [];
+  let i = 0;
+  while (i < n) {
+    push(nodes, record { id: i, edges: [], mark: 0 });
+    i = i + 1;
+  }
+  let j = 0;
+  while (j < n) {
+    let d = 0;
+    while (d < degree) {
+      push(nodes[j].edges, rnd(n));
+      d = d + 1;
+    }
+    j = j + 1;
+  }
+  return nodes;
+}
+
+fun bfs(nodes, start, stamp) {
+  let queue = [start];
+  let head = 0;
+  let visited = 0;
+  nodes[start].mark = stamp;
+  while (head < len(queue)) {
+    let cur = nodes[queue[head]];
+    head = head + 1;
+    visited = visited + 1;
+    let e = 0;
+    while (e < len(cur.edges)) {
+      let nxt = nodes[cur.edges[e]];
+      if (nxt.mark != stamp) {
+        nxt.mark = stamp;
+        push(queue, nxt.id);
+      }
+      e = e + 1;
+    }
+  }
+  return visited;
+}
+
+let graph = build_graph(700 + scale * 350, 3 + scale);
+let total = 0;
+let round = 1;
+
+while (round <= 45 + scale * 20) {
+  total = total + bfs(graph, rnd(len(graph)), round);
+  round = round + 1;
+}
+
+print("graph visited " + str(total));
+print("graph nodes " + str(len(graph)));

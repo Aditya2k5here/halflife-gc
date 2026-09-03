@@ -1,0 +1,41 @@
+# binarytrees -- the classic GC stress test.
+#
+# Why it is here: the same two allocation sites (the leaf and the internal node
+# below) produce *both* the long-lived stretch tree and every throwaway node. A
+# per-site pretenuring table is structurally incapable of separating them --
+# there is no per-site signal to find. A predictor that can see calling context
+# (here: recursion depth, and how many objects this site has already produced)
+# can.
+
+# `seed` and `scale` are injected by the harness (see halflife/eval/run.py).
+# scale=0 is the profiling variant, scale=1 the held-out evaluation variant:
+# same code, different input size and shape, so a model trained on one is
+# genuinely being tested on the other.
+
+fun bottom_up(depth) {
+  if (depth <= 0) {
+    return record { l: nil, r: nil };
+  }
+  return record { l: bottom_up(depth - 1), r: bottom_up(depth - 1) };
+}
+
+fun check(node) {
+  if (node.l == nil) {
+    return 1;
+  }
+  return 1 + check(node.l) + check(node.r);
+}
+
+# The stretch tree is allocated once and held until the very end.
+let long_lived = bottom_up(10 + scale);
+let checksum = 0;
+let iters = 0;
+
+while (iters < 30 + scale * 20) {
+  let t = bottom_up(8 + iters % 2);
+  checksum = checksum + check(t);
+  iters = iters + 1;
+}
+
+checksum = checksum + check(long_lived);
+print("binarytrees checksum " + str(checksum));
