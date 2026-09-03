@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "halflife-gc"
+version = "0.1.0"
+description = "A generational garbage collector that predicts object lifetimes before allocating"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Aditya S"}]
+keywords = ["garbage-collection", "compilers", "virtual-machine", "machine-learning",
+            "pretenuring", "runtime-systems"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Software Development :: Interpreters",
+  "License :: OSI Approved :: MIT License",
+]
+# Deliberately zero runtime dependencies: the experiment must reproduce from a
+# bare Python install, and the predictor runs inside an allocation fast path
+# where a numpy round trip per sample would dominate everything.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+halflife = "halflife.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["halflife*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]

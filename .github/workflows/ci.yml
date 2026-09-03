@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install pytest
+      - run: PYTHONPATH=.:tests pytest tests -q
+      # A short slice of the real experiment, so a change that silently breaks
+      # the pipeline (rather than a unit) still fails CI.
+      - run: PYTHONPATH=. python -m halflife bench --workloads particles
