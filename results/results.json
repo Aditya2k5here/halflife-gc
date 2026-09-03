@@ -1,0 +1,3653 @@
+{
+  "config": {
+    "eval_variant": {
+      "scale": 1,
+      "seed": 2
+    },
+    "flat_heap_bytes": 262144,
+    "learned_thresholds": [
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "model": {
+      "dim": 16384,
+      "epochs": 10,
+      "l2": 1e-06,
+      "lr": 0.15,
+      "pos_weight": 3.0
+    },
+    "nursery_bytes": 32768,
+    "old_bytes": 131072,
+    "profile_variant": {
+      "scale": 0,
+      "seed": 1
+    },
+    "sitetable_thresholds": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "trace_granularity": 1024
+  },
+  "generated_seconds": 151.1,
+  "k_values": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "transfer": {
+    "nonzero_weights": 62,
+    "per_workload": {
+      "binarytrees": {
+        "recovered": 1.014121566471009,
+        "stats": {
+          "barrier_checks": 84032,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 4056,
+          "bytes_promoted": 4056,
+          "bytes_swept": 1651944,
+          "bytes_traced": 878808,
+          "collections": 7,
+          "collector": "generational+transfer",
+          "gc_work": 1052114.4,
+          "instructions": 934716,
+          "label": "gen+transfer",
+          "major_collections": 7,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 169,
+          "objects_traced": 36617,
+          "old_threshold": 244608,
+          "peak_heap_bytes": 301280,
+          "peak_live_bytes": 269064,
+          "pred_accuracy": 0.9073454579721071,
+          "pred_fn": 363,
+          "pred_fn_bytes": 8712,
+          "pred_fp": 3570,
+          "pred_fp_bytes": 85680,
+          "pred_precision": 0.9150384349936933,
+          "pred_recall": 0.9906472225085026,
+          "pred_tn": 66,
+          "pred_tn_bytes": 1584,
+          "pred_tp": 38449,
+          "pred_tp_bytes": 922816,
+          "predictions": 42448,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 97,
+            "name": "transfer",
+            "nonzero_weights": 62,
+            "predictions": 42448,
+            "score_calls": 97,
+            "threshold": 0.9
+          },
+          "pretenured_bytes": 1008496,
+          "pretenured_objects": 42019,
+          "remset_adds": 18,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.664
+        },
+        "threshold": 0.9
+      },
+      "doc_pipeline": {
+        "recovered": -3.8432410926575455,
+        "stats": {
+          "barrier_checks": 21595,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 827944,
+          "bytes_promoted": 827944,
+          "bytes_swept": 1344056,
+          "bytes_traced": 1572832,
+          "collections": 62,
+          "collector": "generational+transfer",
+          "gc_work": 3363125.6,
+          "instructions": 1010365,
+          "label": "gen+transfer",
+          "major_collections": 7,
+          "minor_collections": 55,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 26020,
+          "objects_traced": 48843,
+          "old_threshold": 329968,
+          "peak_heap_bytes": 362736,
+          "peak_live_bytes": 306160,
+          "pred_accuracy": 0.9045268917235616,
+          "pred_fn": 5202,
+          "pred_fn_bytes": 165312,
+          "pred_fp": 853,
+          "pred_fp_bytes": 27472,
+          "pred_precision": 0.17504835589941972,
+          "pred_recall": 0.033624373026193574,
+          "pred_tn": 57185,
+          "pred_tn_bytes": 1658488,
+          "pred_tp": 181,
+          "pred_tp_bytes": 9552,
+          "predictions": 63421,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 130,
+            "name": "transfer",
+            "nonzero_weights": 62,
+            "predictions": 63421,
+            "score_calls": 130,
+            "threshold": 0.9
+          },
+          "pretenured_bytes": 37024,
+          "pretenured_objects": 1034,
+          "remset_adds": 1066,
+          "survivor_rate": 0.08487724886078743,
+          "wall_seconds": 1.018
+        },
+        "threshold": 0.9
+      },
+      "graph_bfs": {
+        "recovered": 0.09148335134683704,
+        "stats": {
+          "barrier_checks": 147494,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 1242096,
+          "bytes_promoted": 1242096,
+          "bytes_swept": 2488264,
+          "bytes_traced": 2557856,
+          "collections": 85,
+          "collector": "generational+transfer",
+          "gc_work": 5290874.4,
+          "instructions": 8718611,
+          "label": "gen+transfer",
+          "major_collections": 10,
+          "minor_collections": 75,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 720,
+          "objects_traced": 32846,
+          "old_threshold": 259520,
+          "peak_heap_bytes": 292288,
+          "peak_live_bytes": 265344,
+          "pred_accuracy": 0.8690144413478591,
+          "pred_fn": 517,
+          "pred_fn_bytes": 37016,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 0.8363406141183919,
+          "pred_tn": 788,
+          "pred_tn_bytes": 2149648,
+          "pred_tp": 2642,
+          "pred_tp_bytes": 97000,
+          "predictions": 3947,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 120,
+            "name": "transfer",
+            "nonzero_weights": 62,
+            "predictions": 3947,
+            "score_calls": 120,
+            "threshold": 0.5
+          },
+          "pretenured_bytes": 97000,
+          "pretenured_objects": 2642,
+          "remset_adds": 587,
+          "survivor_rate": 0.8003546997719787,
+          "wall_seconds": 2.765
+        },
+        "threshold": 0.5
+      },
+      "lru_cache": {
+        "recovered": 0.7406805673523268,
+        "stats": {
+          "barrier_checks": 87046,
+          "bytes_allocated": 888240,
+          "bytes_copied": 4112,
+          "bytes_promoted": 4112,
+          "bytes_swept": 1547288,
+          "bytes_traced": 795320,
+          "collections": 8,
+          "collector": "generational+transfer",
+          "gc_work": 958272.8,
+          "instructions": 1620573,
+          "label": "gen+transfer",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 1,
+          "objects_traced": 28594,
+          "old_threshold": 245808,
+          "peak_heap_bytes": 294832,
+          "peak_live_bytes": 262048,
+          "pred_accuracy": 0.9997897329608603,
+          "pred_fn": 7,
+          "pred_fn_bytes": 8240,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 0.9997897329608603,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 33284,
+          "pred_tp_bytes": 880000,
+          "predictions": 33291,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 56,
+            "name": "transfer",
+            "nonzero_weights": 62,
+            "predictions": 33291,
+            "score_calls": 56,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 880000,
+          "pretenured_objects": 33284,
+          "remset_adds": 1,
+          "survivor_rate": 1.0,
+          "wall_seconds": 1.076
+        },
+        "threshold": 0.3
+      },
+      "particles": {
+        "recovered": 1.0001596339062417,
+        "stats": {
+          "barrier_checks": 113853,
+          "bytes_allocated": 567920,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 0,
+          "collections": 15,
+          "collector": "generational+transfer",
+          "gc_work": 0.0,
+          "instructions": 2070304,
+          "label": "gen+transfer",
+          "major_collections": 0,
+          "minor_collections": 15,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 0,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 85680,
+          "pred_accuracy": 0.9995930548019534,
+          "pred_fn": 2,
+          "pred_fn_bytes": 48,
+          "pred_fp": 7,
+          "pred_fp_bytes": 4176,
+          "pred_precision": 0.9894894894894894,
+          "pred_recall": 0.9969742813918305,
+          "pred_tn": 21448,
+          "pred_tn_bytes": 514752,
+          "pred_tp": 659,
+          "pred_tp_bytes": 48944,
+          "predictions": 22116,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 40,
+            "name": "transfer",
+            "nonzero_weights": 62,
+            "predictions": 22116,
+            "score_calls": 40,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 53120,
+          "pretenured_objects": 666,
+          "remset_adds": 0,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 1.081
+        },
+        "threshold": 0.3
+      }
+    },
+    "train_samples": 89186
+  },
+  "workloads": [
+    {
+      "baseline_work": 3172226.4,
+      "ceiling_work": 1081636.8,
+      "collectors": [
+        {
+          "barrier_checks": 0,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1572768,
+          "bytes_traced": 689184,
+          "collections": 6,
+          "collector": "mark-sweep",
+          "gc_work": 846460.8,
+          "instructions": 934716,
+          "label": "mark-sweep",
+          "major_collections": 6,
+          "minor_collections": 0,
+          "objects_allocated": 42448,
+          "objects_promoted": 0,
+          "objects_traced": 28716,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 262128,
+          "remset_adds": 0,
+          "wall_seconds": 0.396
+        },
+        {
+          "barrier_checks": 0,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 820248,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 820248,
+          "collections": 7,
+          "collector": "semispace",
+          "gc_work": 2460744.0,
+          "instructions": 934716,
+          "label": "semispace",
+          "major_collections": 7,
+          "minor_collections": 0,
+          "objects_allocated": 42448,
+          "objects_promoted": 0,
+          "objects_traced": 34177,
+          "peak_heap_bytes": 524288,
+          "peak_live_bytes": 262128,
+          "remset_adds": 0,
+          "wall_seconds": 0.365
+        },
+        {
+          "barrier_checks": 0,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 804384,
+          "bytes_promoted": 804384,
+          "bytes_swept": 1221624,
+          "bytes_traced": 1441296,
+          "collections": 36,
+          "collector": "generational+never",
+          "gc_work": 3172226.4,
+          "instructions": 934716,
+          "label": "generational",
+          "major_collections": 5,
+          "minor_collections": 31,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 33516,
+          "objects_traced": 60054,
+          "old_threshold": 263760,
+          "peak_heap_bytes": 296528,
+          "peak_live_bytes": 271560,
+          "pred_accuracy": 0.08565774594798342,
+          "pred_fn": 38812,
+          "pred_fn_bytes": 931528,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": null,
+          "pred_recall": 0.0,
+          "pred_tn": 3636,
+          "pred_tn_bytes": 87264,
+          "pred_tp": 0,
+          "pred_tp_bytes": 0,
+          "predictions": 42448,
+          "predictor": {
+            "name": "never"
+          },
+          "pretenured_bytes": 0,
+          "pretenured_objects": 0,
+          "remset_adds": 0,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.427
+        },
+        {
+          "barrier_checks": 84890,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1882344,
+          "bytes_traced": 998760,
+          "collections": 8,
+          "collector": "generational+always",
+          "gc_work": 1186994.4,
+          "instructions": 934716,
+          "label": "gen+always",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 0,
+          "objects_traced": 41615,
+          "old_threshold": 246240,
+          "peak_heap_bytes": 299792,
+          "peak_live_bytes": 267024,
+          "pred_accuracy": 0.9143422540520166,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 3636,
+          "pred_fp_bytes": 87264,
+          "pred_precision": 0.9143422540520166,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 38812,
+          "pred_tp_bytes": 931528,
+          "predictions": 42448,
+          "predictor": {
+            "name": "always"
+          },
+          "pretenured_bytes": 1018792,
+          "pretenured_objects": 42448,
+          "remset_adds": 0,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.439
+        },
+        {
+          "barrier_checks": 84890,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1882344,
+          "bytes_traced": 998760,
+          "collections": 8,
+          "collector": "generational+sitetable",
+          "gc_work": 1186994.4,
+          "instructions": 934716,
+          "label": "gen+sitetable",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 0,
+          "objects_traced": 41615,
+          "old_threshold": 246240,
+          "peak_heap_bytes": 299792,
+          "peak_live_bytes": 267024,
+          "pred_accuracy": 0.9143422540520166,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 3636,
+          "pred_fp_bytes": 87264,
+          "pred_precision": 0.9143422540520166,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 38812,
+          "pred_tp_bytes": 931528,
+          "predictions": 42448,
+          "predictor": {
+            "name": "sitetable",
+            "sites": 5,
+            "sites_pretenured": 5,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 1018792,
+          "pretenured_objects": 42448,
+          "remset_adds": 0,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.458
+        },
+        {
+          "barrier_checks": 74324,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 30168,
+          "bytes_promoted": 30168,
+          "bytes_swept": 1556064,
+          "bytes_traced": 782928,
+          "collections": 6,
+          "collector": "generational+learned",
+          "gc_work": 998870.4,
+          "instructions": 934716,
+          "label": "gen+learned",
+          "major_collections": 6,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 1257,
+          "objects_traced": 32622,
+          "old_threshold": 267648,
+          "peak_heap_bytes": 300416,
+          "peak_live_bytes": 296664,
+          "pred_accuracy": 0.8245147003392386,
+          "pred_fn": 4548,
+          "pred_fn_bytes": 109152,
+          "pred_fp": 2901,
+          "pred_fp_bytes": 69624,
+          "pred_precision": 0.9219426880129153,
+          "pred_recall": 0.8828197464701638,
+          "pred_tn": 735,
+          "pred_tn_bytes": 17640,
+          "pred_tp": 34264,
+          "pred_tp_bytes": 822376,
+          "predictions": 42448,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 113,
+            "name": "learned",
+            "nonzero_weights": 109,
+            "predictions": 42448,
+            "score_calls": 113,
+            "threshold": 0.9
+          },
+          "pretenured_bytes": 892000,
+          "pretenured_objects": 37165,
+          "remset_adds": 2379,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.578
+        },
+        {
+          "barrier_checks": 77618,
+          "bytes_allocated": 1018792,
+          "bytes_copied": 7704,
+          "bytes_promoted": 7704,
+          "bytes_swept": 1739088,
+          "bytes_traced": 892320,
+          "collections": 7,
+          "collector": "generational+oracle",
+          "gc_work": 1081636.8,
+          "instructions": 934716,
+          "label": "gen+oracle",
+          "major_collections": 7,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 42448,
+          "objects_promoted": 321,
+          "objects_traced": 37180,
+          "old_threshold": 260496,
+          "peak_heap_bytes": 294896,
+          "peak_live_bytes": 276696,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 3636,
+          "pred_tn_bytes": 87264,
+          "pred_tp": 38812,
+          "pred_tp_bytes": 931528,
+          "predictions": 42448,
+          "predictor": {
+            "k": 0.5,
+            "name": "oracle"
+          },
+          "pretenured_bytes": 931528,
+          "pretenured_objects": 38812,
+          "remset_adds": 0,
+          "survivor_rate": 0.9143422540520166,
+          "wall_seconds": 0.472
+        }
+      ],
+      "eval_trace": {
+        "bytes_allocated": 1018792,
+        "checkpoints": 987,
+        "granularity": 1024,
+        "immortal": 5632,
+        "objects": 42448,
+        "survivor_byte_rate": 0.34607260363253733,
+        "survivor_bytes": 352576,
+        "survivor_rate": 0.34604692800603093,
+        "survivors": 14689
+      },
+      "headroom": 2090589.5999999999,
+      "model": {
+        "dim": 16384,
+        "nonzero_weights": 109,
+        "pos_weight": 1.0,
+        "test_metrics": {
+          "accuracy": 0.8245147003392386,
+          "auc": 0.5591474273548143,
+          "base_rate": 0.9143422540520166,
+          "f1": 0.9019571712491938,
+          "fn": 4548,
+          "fp": 2901,
+          "precision": 0.9219426880129153,
+          "recall": 0.8828197464701638,
+          "threshold": 0.9,
+          "tn": 735,
+          "tp": 34264
+        },
+        "train_metrics": {
+          "accuracy": 0.8013567438148443,
+          "auc": 0.5928757118766438,
+          "base_rate": 0.9153631284916202,
+          "f1": 0.887007445069911,
+          "fn": 3400,
+          "fp": 1578,
+          "precision": 0.9252734763460719,
+          "recall": 0.8517808099742796,
+          "threshold": 0.9,
+          "tn": 543,
+          "tp": 19539
+        }
+      },
+      "n_sites": 13,
+      "name": "binarytrees",
+      "policy_family": {
+        "eval_curve": [
+          {
+            "gc_work": 1186994.4,
+            "k": 0.0,
+            "pretenured_bytes": 1018792
+          },
+          {
+            "gc_work": 1081636.8,
+            "k": 0.5,
+            "pretenured_bytes": 931528
+          },
+          {
+            "gc_work": 1951502.4,
+            "k": 1.0,
+            "pretenured_bytes": 352576
+          },
+          {
+            "gc_work": 2702642.4,
+            "k": 2.0,
+            "pretenured_bytes": 135208
+          },
+          {
+            "gc_work": 2702642.4,
+            "k": 4.0,
+            "pretenured_bytes": 135208
+          },
+          {
+            "gc_work": 2702642.4,
+            "k": 8.0,
+            "pretenured_bytes": 135208
+          }
+        ],
+        "k_oracle": 0.5,
+        "k_star": 0.5,
+        "k_values": [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          4.0,
+          8.0
+        ],
+        "profile_curve": [
+          {
+            "gc_work": 623973.6,
+            "k": 0.0,
+            "pretenured_bytes": 601480
+          },
+          {
+            "gc_work": 549763.2,
+            "k": 0.5,
+            "pretenured_bytes": 550576
+          },
+          {
+            "gc_work": 1004599.2,
+            "k": 1.0,
+            "pretenured_bytes": 213112
+          },
+          {
+            "gc_work": 1446084.0,
+            "k": 2.0,
+            "pretenured_bytes": 86056
+          },
+          {
+            "gc_work": 1446084.0,
+            "k": 4.0,
+            "pretenured_bytes": 86056
+          },
+          {
+            "gc_work": 1446084.0,
+            "k": 8.0,
+            "pretenured_bytes": 86056
+          }
+        ],
+        "target_bytes": 16384.0
+      },
+      "profile_trace": {
+        "bytes_allocated": 601480,
+        "checkpoints": 582,
+        "granularity": 1024,
+        "immortal": 3584,
+        "objects": 25060,
+        "survivor_byte_rate": 0.35431269535146637,
+        "survivor_bytes": 213112,
+        "survivor_rate": 0.35426975259377497,
+        "survivors": 8878
+      },
+      "recovered": {
+        "gen+always": 0.9496038820818778,
+        "gen+learned": 1.0395899797836936,
+        "gen+sitetable": 0.9496038820818778
+      },
+      "sites": [
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 0,
+          "kind": "concat",
+          "label": "@main:32 concat(+)",
+          "line": 32,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 1,
+          "kind": "concat",
+          "label": "@main:36 concat(+)",
+          "line": 36,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 2,
+          "kind": "concat",
+          "label": "@main:37 concat(+)",
+          "line": 37,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 3,
+          "kind": "concat",
+          "label": "@main:38 concat(+)",
+          "line": 38,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 4,
+          "kind": "concat",
+          "label": "@main:39 concat(+)",
+          "line": 39,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 5,
+          "kind": "concat",
+          "label": "@main:42 concat(+)",
+          "line": 42,
+          "shape": null
+        },
+        {
+          "detail": "'binarytrees chec'",
+          "function": "@main",
+          "id": 6,
+          "kind": "string",
+          "label": "@main:43 string('binarytrees chec')",
+          "line": 43,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 7,
+          "kind": "native",
+          "label": "@main:43 native(str)",
+          "line": 43,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 8,
+          "kind": "concat",
+          "label": "@main:43 concat(+)",
+          "line": 43,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "bottom_up",
+          "id": 9,
+          "kind": "record",
+          "label": "bottom_up:19 record{l,r}",
+          "line": 19,
+          "shape": [
+            "l",
+            "r"
+          ]
+        },
+        {
+          "detail": "",
+          "function": "bottom_up",
+          "id": 10,
+          "kind": "record",
+          "label": "bottom_up:21 record{l,r}",
+          "line": 21,
+          "shape": [
+            "l",
+            "r"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "check",
+          "id": 11,
+          "kind": "concat",
+          "label": "check:28 concat(+)",
+          "line": 28,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "check",
+          "id": 12,
+          "kind": "concat",
+          "label": "check:28 concat(+)",
+          "line": 28,
+          "shape": null
+        }
+      ],
+      "thresholds": {
+        "learned": 0.9,
+        "learned_sweep": [
+          {
+            "gc_work": 623973.6,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 623973.6,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 611347.2,
+            "threshold": 0.7
+          },
+          {
+            "gc_work": 522727.2,
+            "threshold": 0.9
+          }
+        ],
+        "sitetable": 0.3,
+        "sitetable_sweep": [
+          {
+            "gc_work": 623973.6,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 623973.6,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 623973.6,
+            "threshold": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "baseline_work": 2934659.2,
+      "ceiling_work": 266320.8,
+      "collectors": [
+        {
+          "barrier_checks": 36356,
+          "bytes_allocated": 888240,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1310656,
+          "bytes_traced": 560080,
+          "collections": 5,
+          "collector": "mark-sweep",
+          "gc_work": 691145.6,
+          "instructions": 1620573,
+          "label": "mark-sweep",
+          "major_collections": 5,
+          "minor_collections": 0,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 20234,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 262144,
+          "remset_adds": 0,
+          "wall_seconds": 0.736
+        },
+        {
+          "barrier_checks": 36356,
+          "bytes_allocated": 888240,
+          "bytes_copied": 1084304,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 1084304,
+          "collections": 9,
+          "collector": "semispace",
+          "gc_work": 3252912.0,
+          "instructions": 1620573,
+          "label": "semispace",
+          "major_collections": 9,
+          "minor_collections": 0,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 39277,
+          "peak_heap_bytes": 524288,
+          "peak_live_bytes": 262136,
+          "remset_adds": 0,
+          "wall_seconds": 0.705
+        },
+        {
+          "barrier_checks": 36356,
+          "bytes_allocated": 888240,
+          "bytes_copied": 730168,
+          "bytes_promoted": 730168,
+          "bytes_swept": 1123472,
+          "bytes_traced": 1361976,
+          "collections": 33,
+          "collector": "generational+never",
+          "gc_work": 2934659.2,
+          "instructions": 1620573,
+          "label": "generational",
+          "major_collections": 6,
+          "minor_collections": 27,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 27228,
+          "objects_traced": 46015,
+          "old_threshold": 263184,
+          "peak_heap_bytes": 298576,
+          "peak_live_bytes": 286824,
+          "pred_accuracy": 0.0,
+          "pred_fn": 33291,
+          "pred_fn_bytes": 888240,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": null,
+          "pred_recall": 0.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 0,
+          "pred_tp_bytes": 0,
+          "predictions": 33291,
+          "predictor": {
+            "name": "never"
+          },
+          "pretenured_bytes": 0,
+          "pretenured_objects": 0,
+          "remset_adds": 27,
+          "survivor_rate": 1.0,
+          "wall_seconds": 0.794
+        },
+        {
+          "barrier_checks": 88062,
+          "bytes_allocated": 888240,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1513960,
+          "bytes_traced": 764944,
+          "collections": 8,
+          "collector": "generational+always",
+          "gc_work": 916340.0,
+          "instructions": 1620573,
+          "label": "gen+always",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 27455,
+          "old_threshold": 204896,
+          "peak_heap_bytes": 280064,
+          "peak_live_bytes": 247288,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 33291,
+          "pred_tp_bytes": 888240,
+          "predictions": 33291,
+          "predictor": {
+            "name": "always"
+          },
+          "pretenured_bytes": 888240,
+          "pretenured_objects": 33291,
+          "remset_adds": 0,
+          "survivor_rate": 1.0,
+          "wall_seconds": 0.799
+        },
+        {
+          "barrier_checks": 88062,
+          "bytes_allocated": 888240,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1513960,
+          "bytes_traced": 764944,
+          "collections": 8,
+          "collector": "generational+sitetable",
+          "gc_work": 916340.0,
+          "instructions": 1620573,
+          "label": "gen+sitetable",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 27455,
+          "old_threshold": 204896,
+          "peak_heap_bytes": 280064,
+          "peak_live_bytes": 247288,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 33291,
+          "pred_tp_bytes": 888240,
+          "predictions": 33291,
+          "predictor": {
+            "name": "sitetable",
+            "sites": 15,
+            "sites_pretenured": 15,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 888240,
+          "pretenured_objects": 33291,
+          "remset_adds": 0,
+          "survivor_rate": 1.0,
+          "wall_seconds": 0.819
+        },
+        {
+          "barrier_checks": 88062,
+          "bytes_allocated": 888240,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 1513960,
+          "bytes_traced": 764944,
+          "collections": 8,
+          "collector": "generational+learned",
+          "gc_work": 916340.0,
+          "instructions": 1620573,
+          "label": "gen+learned",
+          "major_collections": 8,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 27455,
+          "old_threshold": 204896,
+          "peak_heap_bytes": 280064,
+          "peak_live_bytes": 247288,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 33291,
+          "pred_tp_bytes": 888240,
+          "predictions": 33291,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 64,
+            "name": "learned",
+            "nonzero_weights": 147,
+            "predictions": 33291,
+            "score_calls": 64,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 888240,
+          "pretenured_objects": 33291,
+          "remset_adds": 0,
+          "survivor_rate": 1.0,
+          "wall_seconds": 0.947
+        },
+        {
+          "barrier_checks": 83324,
+          "bytes_allocated": 888240,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 926568,
+          "bytes_traced": 173664,
+          "collections": 6,
+          "collector": "generational+oracle",
+          "gc_work": 266320.8,
+          "instructions": 1620573,
+          "label": "gen+oracle",
+          "major_collections": 6,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 33291,
+          "objects_promoted": 0,
+          "objects_traced": 5589,
+          "old_threshold": 262128,
+          "peak_heap_bytes": 294896,
+          "peak_live_bytes": 161000,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 5409,
+          "pred_tn_bytes": 140592,
+          "pred_tp": 27882,
+          "pred_tp_bytes": 747648,
+          "predictions": 33291,
+          "predictor": {
+            "k": 0.5,
+            "name": "oracle"
+          },
+          "pretenured_bytes": 747648,
+          "pretenured_objects": 27882,
+          "remset_adds": 6,
+          "survivor_rate": 0.8375236550419032,
+          "wall_seconds": 0.768
+        }
+      ],
+      "eval_trace": {
+        "bytes_allocated": 888240,
+        "checkpoints": 855,
+        "granularity": 1024,
+        "immortal": 4905,
+        "objects": 33291,
+        "survivor_byte_rate": 0.7626587408808431,
+        "survivor_bytes": 677424,
+        "survivor_rate": 0.7584332101769247,
+        "survivors": 25249
+      },
+      "headroom": 2668338.4000000004,
+      "model": {
+        "dim": 16384,
+        "nonzero_weights": 147,
+        "pos_weight": 1.0,
+        "test_metrics": {
+          "accuracy": 1.0,
+          "auc": null,
+          "base_rate": 1.0,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "threshold": 0.3,
+          "tn": 0,
+          "tp": 33291
+        },
+        "train_metrics": {
+          "accuracy": 1.0,
+          "auc": null,
+          "base_rate": 1.0,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "threshold": 0.3,
+          "tn": 0,
+          "tp": 20966
+        }
+      },
+      "n_sites": 27,
+      "name": "lru_cache",
+      "policy_family": {
+        "eval_curve": [
+          {
+            "gc_work": 916340.0,
+            "k": 0.0,
+            "pretenured_bytes": 888240
+          },
+          {
+            "gc_work": 266320.8,
+            "k": 0.5,
+            "pretenured_bytes": 747648
+          },
+          {
+            "gc_work": 852761.6,
+            "k": 1.0,
+            "pretenured_bytes": 677424
+          },
+          {
+            "gc_work": 1347858.4,
+            "k": 2.0,
+            "pretenured_bytes": 531536
+          },
+          {
+            "gc_work": 2111708.8,
+            "k": 4.0,
+            "pretenured_bytes": 220040
+          },
+          {
+            "gc_work": 2539729.6,
+            "k": 8.0,
+            "pretenured_bytes": 134928
+          }
+        ],
+        "k_oracle": 0.5,
+        "k_star": 0.0,
+        "k_values": [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          4.0,
+          8.0
+        ],
+        "profile_curve": [
+          {
+            "gc_work": 131545.6,
+            "k": 0.0,
+            "pretenured_bytes": 555056
+          },
+          {
+            "gc_work": 250476.0,
+            "k": 0.5,
+            "pretenured_bytes": 433384
+          },
+          {
+            "gc_work": 464563.2,
+            "k": 1.0,
+            "pretenured_bytes": 382376
+          },
+          {
+            "gc_work": 834544.0,
+            "k": 2.0,
+            "pretenured_bytes": 269704
+          },
+          {
+            "gc_work": 1317873.6,
+            "k": 4.0,
+            "pretenured_bytes": 96216
+          },
+          {
+            "gc_work": 1317873.6,
+            "k": 8.0,
+            "pretenured_bytes": 96216
+          }
+        ],
+        "target_bytes": 0.0
+      },
+      "profile_trace": {
+        "bytes_allocated": 555056,
+        "checkpoints": 535,
+        "granularity": 1024,
+        "immortal": 3531,
+        "objects": 20966,
+        "survivor_byte_rate": 0.6888962555129573,
+        "survivor_bytes": 382376,
+        "survivor_rate": 0.6802442049031766,
+        "survivors": 14262
+      },
+      "recovered": {
+        "gen+always": 0.7563955156512382,
+        "gen+learned": 0.7563955156512382,
+        "gen+sitetable": 0.7563955156512382
+      },
+      "sites": [
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 0,
+          "kind": "concat",
+          "label": "@main:66 concat(+)",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 1,
+          "kind": "concat",
+          "label": "@main:70 concat(+)",
+          "line": 70,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 2,
+          "kind": "concat",
+          "label": "@main:71 concat(+)",
+          "line": 71,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 3,
+          "kind": "native",
+          "label": "@main:71 native(str)",
+          "line": 71,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "@main",
+          "id": 4,
+          "kind": "record",
+          "label": "@main:74 record{payload,key}",
+          "line": 74,
+          "shape": [
+            "payload",
+            "key"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 5,
+          "kind": "concat",
+          "label": "@main:76 concat(+)",
+          "line": 76,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 6,
+          "kind": "concat",
+          "label": "@main:78 concat(+)",
+          "line": 78,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 7,
+          "kind": "concat",
+          "label": "@main:81 concat(+)",
+          "line": 81,
+          "shape": null
+        },
+        {
+          "detail": "'lru hits '",
+          "function": "@main",
+          "id": 8,
+          "kind": "string",
+          "label": "@main:84 string('lru hits ')",
+          "line": 84,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 9,
+          "kind": "native",
+          "label": "@main:84 native(str)",
+          "line": 84,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 10,
+          "kind": "concat",
+          "label": "@main:84 concat(+)",
+          "line": 84,
+          "shape": null
+        },
+        {
+          "detail": "'lru misses '",
+          "function": "@main",
+          "id": 11,
+          "kind": "string",
+          "label": "@main:85 string('lru misses ')",
+          "line": 85,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 12,
+          "kind": "native",
+          "label": "@main:85 native(str)",
+          "line": 85,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 13,
+          "kind": "concat",
+          "label": "@main:85 concat(+)",
+          "line": 85,
+          "shape": null
+        },
+        {
+          "detail": "'lru found '",
+          "function": "@main",
+          "id": 14,
+          "kind": "string",
+          "label": "@main:86 string('lru found ')",
+          "line": 86,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 15,
+          "kind": "native",
+          "label": "@main:86 native(str)",
+          "line": 86,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 16,
+          "kind": "concat",
+          "label": "@main:86 concat(+)",
+          "line": 86,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "rnd",
+          "id": 17,
+          "kind": "concat",
+          "label": "rnd:20 concat(+)",
+          "line": 20,
+          "shape": null
+        },
+        {
+          "detail": "n=0",
+          "function": "make_cache",
+          "id": 18,
+          "kind": "list",
+          "label": "make_cache:25 list(n=0)",
+          "line": 25,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "make_cache",
+          "id": 19,
+          "kind": "native",
+          "label": "make_cache:28 native(push)",
+          "line": 28,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "make_cache",
+          "id": 20,
+          "kind": "concat",
+          "label": "make_cache:29 concat(+)",
+          "line": 29,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "make_cache",
+          "id": 21,
+          "kind": "record",
+          "label": "make_cache:31 record{buckets,size,cap,hits,misses}",
+          "line": 31,
+          "shape": [
+            "buckets",
+            "size",
+            "cap",
+            "hits",
+            "misses"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "cache_get",
+          "id": 22,
+          "kind": "concat",
+          "label": "cache_get:39 concat(+)",
+          "line": 39,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "cache_get",
+          "id": 23,
+          "kind": "concat",
+          "label": "cache_get:44 concat(+)",
+          "line": 44,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "cache_put",
+          "id": 24,
+          "kind": "record",
+          "label": "cache_put:50 record{key,val,next}",
+          "line": 50,
+          "shape": [
+            "key",
+            "val",
+            "next"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "cache_put",
+          "id": 25,
+          "kind": "concat",
+          "label": "cache_put:52 concat(+)",
+          "line": 52,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "evict_all",
+          "id": 26,
+          "kind": "concat",
+          "label": "evict_all:61 concat(+)",
+          "line": 61,
+          "shape": null
+        }
+      ],
+      "thresholds": {
+        "learned": 0.3,
+        "learned_sweep": [
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.7
+          },
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.9
+          }
+        ],
+        "sitetable": 0.3,
+        "sitetable_sweep": [
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 131545.6,
+            "threshold": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "baseline_work": 150368.0,
+      "ceiling_work": 24.0,
+      "collectors": [
+        {
+          "barrier_checks": 107908,
+          "bytes_allocated": 567920,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 524272,
+          "bytes_traced": 89264,
+          "collections": 2,
+          "collector": "mark-sweep",
+          "gc_work": 141691.2,
+          "instructions": 2070304,
+          "label": "mark-sweep",
+          "major_collections": 2,
+          "minor_collections": 0,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 1304,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 262144,
+          "remset_adds": 0,
+          "wall_seconds": 0.805
+        },
+        {
+          "barrier_checks": 107908,
+          "bytes_allocated": 567920,
+          "bytes_copied": 267792,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 267792,
+          "collections": 6,
+          "collector": "semispace",
+          "gc_work": 803376.0,
+          "instructions": 2070304,
+          "label": "semispace",
+          "major_collections": 6,
+          "minor_collections": 0,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 3912,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 131064,
+          "remset_adds": 0,
+          "wall_seconds": 0.85
+        },
+        {
+          "barrier_checks": 107908,
+          "bytes_allocated": 567920,
+          "bytes_copied": 48744,
+          "bytes_promoted": 48744,
+          "bytes_swept": 0,
+          "bytes_traced": 52880,
+          "collections": 17,
+          "collector": "generational+never",
+          "gc_work": 150368.0,
+          "instructions": 2070304,
+          "label": "generational",
+          "major_collections": 0,
+          "minor_collections": 17,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 653,
+          "objects_traced": 655,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 81504,
+          "pred_accuracy": 0.9701121360101285,
+          "pred_fn": 661,
+          "pred_fn_bytes": 48992,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": null,
+          "pred_recall": 0.0,
+          "pred_tn": 21455,
+          "pred_tn_bytes": 518928,
+          "pred_tp": 0,
+          "pred_tp_bytes": 0,
+          "predictions": 22116,
+          "predictor": {
+            "name": "never"
+          },
+          "pretenured_bytes": 0,
+          "pretenured_objects": 0,
+          "remset_adds": 2,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 0.837
+        },
+        {
+          "barrier_checks": 156753,
+          "bytes_allocated": 567920,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 786344,
+          "bytes_traced": 267792,
+          "collections": 6,
+          "collector": "generational+always",
+          "gc_work": 346426.4,
+          "instructions": 2070304,
+          "label": "gen+always",
+          "major_collections": 6,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 3912,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 131064,
+          "pred_accuracy": 0.029887863989871585,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 21455,
+          "pred_fp_bytes": 518928,
+          "pred_precision": 0.029887863989871585,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 661,
+          "pred_tp_bytes": 48992,
+          "predictions": 22116,
+          "predictor": {
+            "name": "always"
+          },
+          "pretenured_bytes": 567920,
+          "pretenured_objects": 22116,
+          "remset_adds": 0,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 0.836
+        },
+        {
+          "barrier_checks": 111813,
+          "bytes_allocated": 567920,
+          "bytes_copied": 8208,
+          "bytes_promoted": 8208,
+          "bytes_swept": 0,
+          "bytes_traced": 8232,
+          "collections": 16,
+          "collector": "generational+sitetable",
+          "gc_work": 24648.0,
+          "instructions": 2070304,
+          "label": "gen+sitetable",
+          "major_collections": 0,
+          "minor_collections": 16,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 1,
+          "objects_traced": 2,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 77440,
+          "pred_accuracy": 0.9997739193344185,
+          "pred_fn": 4,
+          "pred_fn_bytes": 12368,
+          "pred_fp": 1,
+          "pred_fp_bytes": 48,
+          "pred_precision": 0.9984802431610942,
+          "pred_recall": 0.9939485627836612,
+          "pred_tn": 21454,
+          "pred_tn_bytes": 518880,
+          "pred_tp": 657,
+          "pred_tp_bytes": 36624,
+          "predictions": 22116,
+          "predictor": {
+            "name": "sitetable",
+            "sites": 10,
+            "sites_pretenured": 8,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 36672,
+          "pretenured_objects": 658,
+          "remset_adds": 1,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 0.866
+        },
+        {
+          "barrier_checks": 113733,
+          "bytes_allocated": 567920,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 24,
+          "collections": 15,
+          "collector": "generational+learned",
+          "gc_work": 24.0,
+          "instructions": 2070304,
+          "label": "gen+learned",
+          "major_collections": 0,
+          "minor_collections": 15,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 1,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 84656,
+          "pred_accuracy": 0.9997739193344185,
+          "pred_fn": 2,
+          "pred_fn_bytes": 48,
+          "pred_fp": 3,
+          "pred_fp_bytes": 3152,
+          "pred_precision": 0.9954682779456193,
+          "pred_recall": 0.9969742813918305,
+          "pred_tn": 21452,
+          "pred_tn_bytes": 515776,
+          "pred_tp": 659,
+          "pred_tp_bytes": 48944,
+          "predictions": 22116,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 43,
+            "name": "learned",
+            "nonzero_weights": 112,
+            "predictions": 22116,
+            "score_calls": 43,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 52096,
+          "pretenured_objects": 662,
+          "remset_adds": 1,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 0.973
+        },
+        {
+          "barrier_checks": 113349,
+          "bytes_allocated": 567920,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 24,
+          "collections": 15,
+          "collector": "generational+oracle",
+          "gc_work": 24.0,
+          "instructions": 2070304,
+          "label": "gen+oracle",
+          "major_collections": 0,
+          "minor_collections": 15,
+          "nursery_bytes": 32768,
+          "objects_allocated": 22116,
+          "objects_promoted": 0,
+          "objects_traced": 1,
+          "old_threshold": 131072,
+          "peak_heap_bytes": 163840,
+          "peak_live_bytes": 81504,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 21455,
+          "pred_tn_bytes": 518928,
+          "pred_tp": 661,
+          "pred_tp_bytes": 48992,
+          "predictions": 22116,
+          "predictor": {
+            "k": 0.5,
+            "name": "oracle"
+          },
+          "pretenured_bytes": 48992,
+          "pretenured_objects": 661,
+          "remset_adds": 1,
+          "survivor_rate": 0.029887863989871585,
+          "wall_seconds": 0.898
+        }
+      ],
+      "eval_trace": {
+        "bytes_allocated": 567920,
+        "checkpoints": 536,
+        "granularity": 1024,
+        "immortal": 660,
+        "objects": 22116,
+        "survivor_byte_rate": 0.0790252148189886,
+        "survivor_bytes": 44880,
+        "survivor_rate": 0.02984264785675529,
+        "survivors": 660
+      },
+      "headroom": 150344.0,
+      "model": {
+        "dim": 16384,
+        "nonzero_weights": 112,
+        "pos_weight": 10.0,
+        "test_metrics": {
+          "accuracy": 0.9997739193344185,
+          "auc": 0.998465140597902,
+          "base_rate": 0.029887863989871585,
+          "f1": 0.9962207105064248,
+          "fn": 2,
+          "fp": 3,
+          "precision": 0.9954682779456193,
+          "recall": 0.9969742813918305,
+          "threshold": 0.3,
+          "tn": 21452,
+          "tp": 659
+        },
+        "train_metrics": {
+          "accuracy": 0.9968416559965856,
+          "auc": 0.9906460238085407,
+          "base_rate": 0.04199743918053777,
+          "f1": 0.9611752360965372,
+          "fn": 34,
+          "fp": 3,
+          "precision": 0.9934924078091106,
+          "recall": 0.9308943089430894,
+          "threshold": 0.3,
+          "tn": 11220,
+          "tp": 458
+        }
+      },
+      "n_sites": 25,
+      "name": "particles",
+      "policy_family": {
+        "eval_curve": [
+          {
+            "gc_work": 346426.4,
+            "k": 0.0,
+            "pretenured_bytes": 567920
+          },
+          {
+            "gc_work": 24.0,
+            "k": 0.5,
+            "pretenured_bytes": 48992
+          },
+          {
+            "gc_work": 24.0,
+            "k": 1.0,
+            "pretenured_bytes": 44880
+          },
+          {
+            "gc_work": 24.0,
+            "k": 2.0,
+            "pretenured_bytes": 44880
+          },
+          {
+            "gc_work": 24.0,
+            "k": 4.0,
+            "pretenured_bytes": 44880
+          },
+          {
+            "gc_work": 24.0,
+            "k": 8.0,
+            "pretenured_bytes": 44880
+          }
+        ],
+        "k_oracle": 0.5,
+        "k_star": 0.5,
+        "k_values": [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          4.0,
+          8.0
+        ],
+        "profile_curve": [
+          {
+            "gc_work": 84886.4,
+            "k": 0.0,
+            "pretenured_bytes": 303712
+          },
+          {
+            "gc_work": 24.0,
+            "k": 0.5,
+            "pretenured_bytes": 30352
+          },
+          {
+            "gc_work": 24.0,
+            "k": 1.0,
+            "pretenured_bytes": 30352
+          },
+          {
+            "gc_work": 24.0,
+            "k": 2.0,
+            "pretenured_bytes": 30352
+          },
+          {
+            "gc_work": 24.0,
+            "k": 4.0,
+            "pretenured_bytes": 30352
+          },
+          {
+            "gc_work": 24.0,
+            "k": 8.0,
+            "pretenured_bytes": 30352
+          }
+        ],
+        "target_bytes": 16384.0
+      },
+      "profile_trace": {
+        "bytes_allocated": 303712,
+        "checkpoints": 287,
+        "granularity": 1024,
+        "immortal": 492,
+        "objects": 11715,
+        "survivor_byte_rate": 0.09993678221472975,
+        "survivor_bytes": 30352,
+        "survivor_rate": 0.04199743918053777,
+        "survivors": 492
+      },
+      "recovered": {
+        "gen+always": -1.304065343478955,
+        "gen+learned": 1.0,
+        "gen+sitetable": 0.8362156121960305
+      },
+      "sites": [
+        {
+          "detail": "n=0",
+          "function": "@main",
+          "id": 0,
+          "kind": "list",
+          "label": "@main:40 list(n=0)",
+          "line": 40,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 1,
+          "kind": "concat",
+          "label": "@main:42 concat(+)",
+          "line": 42,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "@main",
+          "id": 2,
+          "kind": "native",
+          "label": "@main:43 native(push)",
+          "line": 43,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 3,
+          "kind": "concat",
+          "label": "@main:44 concat(+)",
+          "line": 44,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 4,
+          "kind": "concat",
+          "label": "@main:49 concat(+)",
+          "line": 49,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 5,
+          "kind": "concat",
+          "label": "@main:52 concat(+)",
+          "line": 52,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 6,
+          "kind": "concat",
+          "label": "@main:53 concat(+)",
+          "line": 53,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 7,
+          "kind": "concat",
+          "label": "@main:55 concat(+)",
+          "line": 55,
+          "shape": null
+        },
+        {
+          "detail": "'particles energy'",
+          "function": "@main",
+          "id": 8,
+          "kind": "string",
+          "label": "@main:58 string('particles energy')",
+          "line": 58,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 9,
+          "kind": "native",
+          "label": "@main:58 native(str)",
+          "line": 58,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 10,
+          "kind": "concat",
+          "label": "@main:58 concat(+)",
+          "line": 58,
+          "shape": null
+        },
+        {
+          "detail": "'particles count '",
+          "function": "@main",
+          "id": 11,
+          "kind": "string",
+          "label": "@main:59 string('particles count ')",
+          "line": 59,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 12,
+          "kind": "native",
+          "label": "@main:59 native(str)",
+          "line": 59,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 13,
+          "kind": "concat",
+          "label": "@main:59 concat(+)",
+          "line": 59,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "rnd",
+          "id": 14,
+          "kind": "concat",
+          "label": "rnd:17 concat(+)",
+          "line": 17,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "make_particle",
+          "id": 15,
+          "kind": "record",
+          "label": "make_particle:22 record{id,x,y,vx,vy,energy}",
+          "line": 22,
+          "shape": [
+            "id",
+            "x",
+            "y",
+            "vx",
+            "vy",
+            "energy"
+          ]
+        },
+        {
+          "detail": "",
+          "function": "force_on",
+          "id": 16,
+          "kind": "record",
+          "label": "force_on:27 record{dx,dy}",
+          "line": 27,
+          "shape": [
+            "dx",
+            "dy"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 17,
+          "kind": "concat",
+          "label": "step:32 concat(+)",
+          "line": 32,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 18,
+          "kind": "concat",
+          "label": "step:33 concat(+)",
+          "line": 33,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 19,
+          "kind": "concat",
+          "label": "step:34 concat(+)",
+          "line": 34,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 20,
+          "kind": "concat",
+          "label": "step:34 concat(+)",
+          "line": 34,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 21,
+          "kind": "concat",
+          "label": "step:35 concat(+)",
+          "line": 35,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 22,
+          "kind": "concat",
+          "label": "step:35 concat(+)",
+          "line": 35,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 23,
+          "kind": "concat",
+          "label": "step:36 concat(+)",
+          "line": 36,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "step",
+          "id": 24,
+          "kind": "concat",
+          "label": "step:36 concat(+)",
+          "line": 36,
+          "shape": null
+        }
+      ],
+      "thresholds": {
+        "learned": 0.3,
+        "learned_sweep": [
+          {
+            "gc_work": 24.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 24.0,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 24.0,
+            "threshold": 0.7
+          },
+          {
+            "gc_work": 24.0,
+            "threshold": 0.9
+          }
+        ],
+        "sitetable": 0.3,
+        "sitetable_sweep": [
+          {
+            "gc_work": 12360.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 12360.0,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 12408.0,
+            "threshold": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "baseline_work": 5592340.0,
+      "ceiling_work": 2297034.4,
+      "collectors": [
+        {
+          "barrier_checks": 139614,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 4176424,
+          "bytes_traced": 2080256,
+          "collections": 16,
+          "collector": "mark-sweep",
+          "gc_work": 2497898.4,
+          "instructions": 8718611,
+          "label": "mark-sweep",
+          "major_collections": 16,
+          "minor_collections": 0,
+          "objects_allocated": 3947,
+          "objects_promoted": 0,
+          "objects_traced": 50464,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 261536,
+          "remset_adds": 0,
+          "wall_seconds": 2.64
+        },
+        {
+          "barrier_checks": 139614,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 2195088,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 2195088,
+          "collections": 17,
+          "collector": "semispace",
+          "gc_work": 6585264.0,
+          "instructions": 8718611,
+          "label": "semispace",
+          "major_collections": 17,
+          "minor_collections": 0,
+          "objects_allocated": 3947,
+          "objects_promoted": 0,
+          "objects_traced": 53541,
+          "peak_heap_bytes": 524288,
+          "peak_live_bytes": 261536,
+          "remset_adds": 0,
+          "wall_seconds": 2.567
+        },
+        {
+          "barrier_checks": 139614,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 1345088,
+          "bytes_promoted": 1345088,
+          "bytes_swept": 2494440,
+          "bytes_traced": 2652720,
+          "collections": 88,
+          "collector": "generational+never",
+          "gc_work": 5592340.0,
+          "instructions": 8718611,
+          "label": "generational",
+          "major_collections": 10,
+          "minor_collections": 78,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 3358,
+          "objects_traced": 34975,
+          "old_threshold": 259520,
+          "peak_heap_bytes": 292288,
+          "peak_live_bytes": 265344,
+          "pred_accuracy": 0.1996453002280213,
+          "pred_fn": 3159,
+          "pred_fn_bytes": 134016,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": null,
+          "pred_recall": 0.0,
+          "pred_tn": 788,
+          "pred_tn_bytes": 2149648,
+          "pred_tp": 0,
+          "pred_tp_bytes": 0,
+          "predictions": 3947,
+          "predictor": {
+            "name": "never"
+          },
+          "pretenured_bytes": 0,
+          "pretenured_objects": 0,
+          "remset_adds": 78,
+          "survivor_rate": 0.8003546997719787,
+          "wall_seconds": 2.622
+        },
+        {
+          "barrier_checks": 418217,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 4323864,
+          "bytes_traced": 2256528,
+          "collections": 17,
+          "collector": "generational+always",
+          "gc_work": 2688914.4,
+          "instructions": 8718611,
+          "label": "gen+always",
+          "major_collections": 17,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 0,
+          "objects_traced": 53541,
+          "old_threshold": 267712,
+          "peak_heap_bytes": 300480,
+          "peak_live_bytes": 265632,
+          "pred_accuracy": 0.8003546997719787,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 788,
+          "pred_fp_bytes": 2149648,
+          "pred_precision": 0.8003546997719787,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 3159,
+          "pred_tp_bytes": 134016,
+          "predictions": 3947,
+          "predictor": {
+            "name": "always"
+          },
+          "pretenured_bytes": 2283664,
+          "pretenured_objects": 3947,
+          "remset_adds": 0,
+          "survivor_rate": 0.8003546997719787,
+          "wall_seconds": 2.748
+        },
+        {
+          "barrier_checks": 148019,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 1229688,
+          "bytes_promoted": 1229688,
+          "bytes_swept": 2488312,
+          "bytes_traced": 2529088,
+          "collections": 85,
+          "collector": "generational+sitetable",
+          "gc_work": 5237295.2,
+          "instructions": 8718611,
+          "label": "gen+sitetable",
+          "major_collections": 10,
+          "minor_collections": 75,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 205,
+          "objects_traced": 31820,
+          "old_threshold": 259520,
+          "peak_heap_bytes": 292288,
+          "peak_live_bytes": 265344,
+          "pred_accuracy": 0.9992399290600456,
+          "pred_fn": 2,
+          "pred_fn_bytes": 24608,
+          "pred_fp": 1,
+          "pred_fp_bytes": 48,
+          "pred_precision": 0.9996833438885371,
+          "pred_recall": 0.9993668882557771,
+          "pred_tn": 787,
+          "pred_tn_bytes": 2149600,
+          "pred_tp": 3157,
+          "pred_tp_bytes": 109408,
+          "predictions": 3947,
+          "predictor": {
+            "name": "sitetable",
+            "sites": 12,
+            "sites_pretenured": 9,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 109456,
+          "pretenured_objects": 3158,
+          "remset_adds": 76,
+          "survivor_rate": 0.8003546997719787,
+          "wall_seconds": 2.867
+        },
+        {
+          "barrier_checks": 148019,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 1229688,
+          "bytes_promoted": 1229688,
+          "bytes_swept": 2488312,
+          "bytes_traced": 2529088,
+          "collections": 85,
+          "collector": "generational+learned",
+          "gc_work": 5237295.2,
+          "instructions": 8718611,
+          "label": "gen+learned",
+          "major_collections": 10,
+          "minor_collections": 75,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 205,
+          "objects_traced": 31820,
+          "old_threshold": 259520,
+          "peak_heap_bytes": 292288,
+          "peak_live_bytes": 265344,
+          "pred_accuracy": 0.9992399290600456,
+          "pred_fn": 2,
+          "pred_fn_bytes": 24608,
+          "pred_fp": 1,
+          "pred_fp_bytes": 48,
+          "pred_precision": 0.9996833438885371,
+          "pred_recall": 0.9993668882557771,
+          "pred_tn": 787,
+          "pred_tn_bytes": 2149600,
+          "pred_tp": 3157,
+          "pred_tp_bytes": 109408,
+          "predictions": 3947,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 138,
+            "name": "learned",
+            "nonzero_weights": 130,
+            "predictions": 3947,
+            "score_calls": 138,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 109456,
+          "pretenured_objects": 3158,
+          "remset_adds": 76,
+          "survivor_rate": 0.8003546997719787,
+          "wall_seconds": 2.672
+        },
+        {
+          "barrier_checks": 351600,
+          "bytes_allocated": 2283664,
+          "bytes_copied": 26832,
+          "bytes_promoted": 26832,
+          "bytes_swept": 3603304,
+          "bytes_traced": 1883040,
+          "collections": 27,
+          "collector": "generational+oracle",
+          "gc_work": 2297034.4,
+          "instructions": 8718611,
+          "label": "gen+oracle",
+          "major_collections": 14,
+          "minor_collections": 13,
+          "nursery_bytes": 32768,
+          "objects_allocated": 3947,
+          "objects_promoted": 13,
+          "objects_traced": 44144,
+          "old_threshold": 267712,
+          "peak_heap_bytes": 300480,
+          "peak_live_bytes": 271504,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 591,
+          "pred_tn_bytes": 542392,
+          "pred_tp": 3356,
+          "pred_tp_bytes": 1741272,
+          "predictions": 3947,
+          "predictor": {
+            "k": 0.5,
+            "name": "oracle"
+          },
+          "pretenured_bytes": 1741272,
+          "pretenured_objects": 3356,
+          "remset_adds": 79,
+          "survivor_rate": 0.8502660248289841,
+          "wall_seconds": 2.558
+        }
+      ],
+      "eval_trace": {
+        "bytes_allocated": 2283664,
+        "checkpoints": 498,
+        "granularity": 1024,
+        "immortal": 3158,
+        "objects": 3947,
+        "survivor_byte_rate": 0.06116836802611943,
+        "survivor_bytes": 139688,
+        "survivor_rate": 0.8170762604509755,
+        "survivors": 3225
+      },
+      "headroom": 3295305.6,
+      "model": {
+        "dim": 16384,
+        "nonzero_weights": 130,
+        "pos_weight": 1.0,
+        "test_metrics": {
+          "accuracy": 0.9992399290600456,
+          "auc": 0.9999979913967506,
+          "base_rate": 0.8003546997719787,
+          "f1": 0.9995250910242204,
+          "fn": 2,
+          "fp": 1,
+          "precision": 0.9996833438885371,
+          "recall": 0.9993668882557771,
+          "threshold": 0.3,
+          "tn": 787,
+          "tp": 3157
+        },
+        "train_metrics": {
+          "accuracy": 0.9992340099578706,
+          "auc": 0.9999990568920443,
+          "base_rate": 0.8073535044044428,
+          "f1": 0.9995256166982922,
+          "fn": 1,
+          "fp": 1,
+          "precision": 0.9995256166982922,
+          "recall": 0.9995256166982922,
+          "threshold": 0.3,
+          "tn": 502,
+          "tp": 2107
+        }
+      },
+      "n_sites": 25,
+      "name": "graph_bfs",
+      "policy_family": {
+        "eval_curve": [
+          {
+            "gc_work": 2688914.4,
+            "k": 0.0,
+            "pretenured_bytes": 2283664
+          },
+          {
+            "gc_work": 2297034.4,
+            "k": 0.5,
+            "pretenured_bytes": 1741272
+          },
+          {
+            "gc_work": 5121791.2,
+            "k": 1.0,
+            "pretenured_bytes": 139688
+          },
+          {
+            "gc_work": 5124911.2,
+            "k": 2.0,
+            "pretenured_bytes": 134016
+          },
+          {
+            "gc_work": 5142147.2,
+            "k": 4.0,
+            "pretenured_bytes": 125808
+          },
+          {
+            "gc_work": 5142147.2,
+            "k": 8.0,
+            "pretenured_bytes": 125808
+          }
+        ],
+        "k_oracle": 0.5,
+        "k_star": 2.0,
+        "k_values": [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          4.0,
+          8.0
+        ],
+        "profile_curve": [
+          {
+            "gc_work": 913896.8,
+            "k": 0.0,
+            "pretenured_bytes": 833984
+          },
+          {
+            "gc_work": 1671019.2,
+            "k": 0.5,
+            "pretenured_bytes": 88472
+          },
+          {
+            "gc_work": 957188.0,
+            "k": 1.0,
+            "pretenured_bytes": 85328
+          },
+          {
+            "gc_work": 861031.2,
+            "k": 2.0,
+            "pretenured_bytes": 81216
+          },
+          {
+            "gc_work": 861031.2,
+            "k": 4.0,
+            "pretenured_bytes": 81216
+          },
+          {
+            "gc_work": 861031.2,
+            "k": 8.0,
+            "pretenured_bytes": 81216
+          }
+        ],
+        "target_bytes": 65536.0
+      },
+      "profile_trace": {
+        "bytes_allocated": 833984,
+        "checkpoints": 297,
+        "granularity": 1024,
+        "immortal": 2108,
+        "objects": 2611,
+        "survivor_byte_rate": 0.10231371345253626,
+        "survivor_bytes": 85328,
+        "survivor_rate": 0.8077364994255075,
+        "survivors": 2109
+      },
+      "recovered": {
+        "gen+always": 0.881079314768257,
+        "gen+learned": 0.10774260208218618,
+        "gen+sitetable": 0.10774260208218618
+      },
+      "sites": [
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 0,
+          "kind": "concat",
+          "label": "@main:66 concat(+)",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 1,
+          "kind": "concat",
+          "label": "@main:66 concat(+)",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 2,
+          "kind": "concat",
+          "label": "@main:70 concat(+)",
+          "line": 70,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 3,
+          "kind": "concat",
+          "label": "@main:71 concat(+)",
+          "line": 71,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 4,
+          "kind": "concat",
+          "label": "@main:72 concat(+)",
+          "line": 72,
+          "shape": null
+        },
+        {
+          "detail": "'graph visited '",
+          "function": "@main",
+          "id": 5,
+          "kind": "string",
+          "label": "@main:75 string('graph visited ')",
+          "line": 75,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 6,
+          "kind": "native",
+          "label": "@main:75 native(str)",
+          "line": 75,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 7,
+          "kind": "concat",
+          "label": "@main:75 concat(+)",
+          "line": 75,
+          "shape": null
+        },
+        {
+          "detail": "'graph nodes '",
+          "function": "@main",
+          "id": 8,
+          "kind": "string",
+          "label": "@main:76 string('graph nodes ')",
+          "line": 76,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 9,
+          "kind": "native",
+          "label": "@main:76 native(str)",
+          "line": 76,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 10,
+          "kind": "concat",
+          "label": "@main:76 concat(+)",
+          "line": 76,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "rnd",
+          "id": 11,
+          "kind": "concat",
+          "label": "rnd:21 concat(+)",
+          "line": 21,
+          "shape": null
+        },
+        {
+          "detail": "n=0",
+          "function": "build_graph",
+          "id": 12,
+          "kind": "list",
+          "label": "build_graph:26 list(n=0)",
+          "line": 26,
+          "shape": null
+        },
+        {
+          "detail": "n=0",
+          "function": "build_graph",
+          "id": 13,
+          "kind": "list",
+          "label": "build_graph:29 list(n=0)",
+          "line": 29,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "build_graph",
+          "id": 14,
+          "kind": "record",
+          "label": "build_graph:29 record{id,edges,mark}",
+          "line": 29,
+          "shape": [
+            "id",
+            "edges",
+            "mark"
+          ]
+        },
+        {
+          "detail": "push",
+          "function": "build_graph",
+          "id": 15,
+          "kind": "native",
+          "label": "build_graph:29 native(push)",
+          "line": 29,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "build_graph",
+          "id": 16,
+          "kind": "concat",
+          "label": "build_graph:30 concat(+)",
+          "line": 30,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "build_graph",
+          "id": 17,
+          "kind": "native",
+          "label": "build_graph:36 native(push)",
+          "line": 36,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "build_graph",
+          "id": 18,
+          "kind": "concat",
+          "label": "build_graph:37 concat(+)",
+          "line": 37,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "build_graph",
+          "id": 19,
+          "kind": "concat",
+          "label": "build_graph:39 concat(+)",
+          "line": 39,
+          "shape": null
+        },
+        {
+          "detail": "n=1",
+          "function": "bfs",
+          "id": 20,
+          "kind": "list",
+          "label": "bfs:45 list(n=1)",
+          "line": 45,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "bfs",
+          "id": 21,
+          "kind": "concat",
+          "label": "bfs:51 concat(+)",
+          "line": 51,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "bfs",
+          "id": 22,
+          "kind": "concat",
+          "label": "bfs:52 concat(+)",
+          "line": 52,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "bfs",
+          "id": 23,
+          "kind": "native",
+          "label": "bfs:58 native(push)",
+          "line": 58,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "bfs",
+          "id": 24,
+          "kind": "concat",
+          "label": "bfs:60 concat(+)",
+          "line": 60,
+          "shape": null
+        }
+      ],
+      "thresholds": {
+        "learned": 0.3,
+        "learned_sweep": [
+          {
+            "gc_work": 1027600.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 1027600.0,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 1027643.2,
+            "threshold": 0.7
+          },
+          {
+            "gc_work": 1027643.2,
+            "threshold": 0.9
+          }
+        ],
+        "sitetable": 0.3,
+        "sitetable_sweep": [
+          {
+            "gc_work": 1027600.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 1027600.0,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 1027643.2,
+            "threshold": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "baseline_work": 1098863.2,
+      "ceiling_work": 509708.8,
+      "collectors": [
+        {
+          "barrier_checks": 18035,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 2883464,
+          "bytes_traced": 1221392,
+          "collections": 11,
+          "collector": "mark-sweep",
+          "gc_work": 1509738.4,
+          "instructions": 1010365,
+          "label": "mark-sweep",
+          "major_collections": 11,
+          "minor_collections": 0,
+          "objects_allocated": 63421,
+          "objects_promoted": 0,
+          "objects_traced": 37898,
+          "peak_heap_bytes": 262144,
+          "peak_live_bytes": 262144,
+          "remset_adds": 0,
+          "wall_seconds": 0.576
+        },
+        {
+          "barrier_checks": 18035,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 6229000,
+          "bytes_promoted": 0,
+          "bytes_swept": 0,
+          "bytes_traced": 6229000,
+          "collections": 56,
+          "collector": "semispace",
+          "gc_work": 18687000.0,
+          "instructions": 1010365,
+          "label": "semispace",
+          "major_collections": 56,
+          "minor_collections": 0,
+          "objects_allocated": 63421,
+          "objects_promoted": 0,
+          "objects_traced": 193047,
+          "peak_heap_bytes": 524288,
+          "peak_live_bytes": 262136,
+          "remset_adds": 0,
+          "wall_seconds": 0.607
+        },
+        {
+          "barrier_checks": 18035,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 246992,
+          "bytes_promoted": 246992,
+          "bytes_swept": 320792,
+          "bytes_traced": 572800,
+          "collections": 58,
+          "collector": "generational+never",
+          "gc_work": 1098863.2,
+          "instructions": 1010365,
+          "label": "generational",
+          "major_collections": 2,
+          "minor_collections": 56,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 7627,
+          "objects_traced": 15593,
+          "old_threshold": 316096,
+          "peak_heap_bytes": 348864,
+          "peak_live_bytes": 216472,
+          "pred_accuracy": 0.9151227511392126,
+          "pred_fn": 5383,
+          "pred_fn_bytes": 174864,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": null,
+          "pred_recall": 0.0,
+          "pred_tn": 58038,
+          "pred_tn_bytes": 1685960,
+          "pred_tp": 0,
+          "pred_tp_bytes": 0,
+          "predictions": 63421,
+          "predictor": {
+            "name": "never"
+          },
+          "pretenured_bytes": 0,
+          "pretenured_objects": 0,
+          "remset_adds": 138,
+          "survivor_rate": 0.08487724886078743,
+          "wall_seconds": 0.649
+        },
+        {
+          "barrier_checks": 96417,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 0,
+          "bytes_promoted": 0,
+          "bytes_swept": 3023792,
+          "bytes_traced": 1440168,
+          "collections": 17,
+          "collector": "generational+always",
+          "gc_work": 1742547.2,
+          "instructions": 1010365,
+          "label": "gen+always",
+          "major_collections": 17,
+          "minor_collections": 0,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 0,
+          "objects_traced": 44677,
+          "old_threshold": 330480,
+          "peak_heap_bytes": 363248,
+          "peak_live_bytes": 297864,
+          "pred_accuracy": 0.08487724886078743,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 58038,
+          "pred_fp_bytes": 1685960,
+          "pred_precision": 0.08487724886078743,
+          "pred_recall": 1.0,
+          "pred_tn": 0,
+          "pred_tn_bytes": 0,
+          "pred_tp": 5383,
+          "pred_tp_bytes": 174864,
+          "predictions": 63421,
+          "predictor": {
+            "name": "always"
+          },
+          "pretenured_bytes": 1860824,
+          "pretenured_objects": 63421,
+          "remset_adds": 0,
+          "survivor_rate": 0.08487724886078743,
+          "wall_seconds": 0.679
+        },
+        {
+          "barrier_checks": 18544,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 242184,
+          "bytes_promoted": 242184,
+          "bytes_swept": 321240,
+          "bytes_traced": 572024,
+          "collections": 58,
+          "collector": "generational+sitetable",
+          "gc_work": 1088516.0,
+          "instructions": 1010365,
+          "label": "gen+sitetable",
+          "major_collections": 2,
+          "minor_collections": 56,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 7591,
+          "objects_traced": 15558,
+          "old_threshold": 316496,
+          "peak_heap_bytes": 349264,
+          "peak_live_bytes": 216072,
+          "pred_accuracy": 0.915296195266552,
+          "pred_fn": 5369,
+          "pred_fn_bytes": 170656,
+          "pred_fp": 3,
+          "pred_fp_bytes": 272,
+          "pred_precision": 0.8235294117647058,
+          "pred_recall": 0.002600780234070221,
+          "pred_tn": 58035,
+          "pred_tn_bytes": 1685688,
+          "pred_tp": 14,
+          "pred_tp_bytes": 4208,
+          "predictions": 63421,
+          "predictor": {
+            "name": "sitetable",
+            "sites": 18,
+            "sites_pretenured": 11,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 4480,
+          "pretenured_objects": 17,
+          "remset_adds": 132,
+          "survivor_rate": 0.08487724886078743,
+          "wall_seconds": 0.701
+        },
+        {
+          "barrier_checks": 91008,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 226192,
+          "bytes_promoted": 226192,
+          "bytes_swept": 1910488,
+          "bytes_traced": 1444216,
+          "collections": 36,
+          "collector": "generational+learned",
+          "gc_work": 2087648.8,
+          "instructions": 1010365,
+          "label": "gen+learned",
+          "major_collections": 10,
+          "minor_collections": 26,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 9365,
+          "objects_traced": 47457,
+          "old_threshold": 331952,
+          "peak_heap_bytes": 364720,
+          "peak_live_bytes": 309392,
+          "pred_accuracy": 0.6669399725642926,
+          "pred_fn": 1578,
+          "pred_fn_bytes": 38112,
+          "pred_fp": 19545,
+          "pred_fp_bytes": 729920,
+          "pred_precision": 0.16295503211991436,
+          "pred_recall": 0.7068549136169422,
+          "pred_tn": 38493,
+          "pred_tn_bytes": 956040,
+          "pred_tp": 3805,
+          "pred_tp_bytes": 136752,
+          "predictions": 63421,
+          "predictor": {
+            "dim": 16384,
+            "distinct_contexts": 136,
+            "name": "learned",
+            "nonzero_weights": 202,
+            "predictions": 63421,
+            "score_calls": 136,
+            "threshold": 0.3
+          },
+          "pretenured_bytes": 866672,
+          "pretenured_objects": 23350,
+          "remset_adds": 11355,
+          "survivor_rate": 0.08487724886078743,
+          "wall_seconds": 0.971
+        },
+        {
+          "barrier_checks": 29339,
+          "bytes_allocated": 1860824,
+          "bytes_copied": 71632,
+          "bytes_promoted": 71632,
+          "bytes_swept": 344128,
+          "bytes_traced": 332032,
+          "collections": 52,
+          "collector": "generational+oracle",
+          "gc_work": 509708.8,
+          "instructions": 1010365,
+          "label": "gen+oracle",
+          "major_collections": 2,
+          "minor_collections": 50,
+          "nursery_bytes": 32768,
+          "objects_allocated": 63421,
+          "objects_promoted": 2222,
+          "objects_traced": 10339,
+          "old_threshold": 318608,
+          "peak_heap_bytes": 351376,
+          "peak_live_bytes": 219344,
+          "pred_accuracy": 1.0,
+          "pred_fn": 0,
+          "pred_fn_bytes": 0,
+          "pred_fp": 0,
+          "pred_fp_bytes": 0,
+          "pred_precision": 1.0,
+          "pred_recall": 1.0,
+          "pred_tn": 58037,
+          "pred_tn_bytes": 1685816,
+          "pred_tp": 5384,
+          "pred_tp_bytes": 175008,
+          "predictions": 63421,
+          "predictor": {
+            "k": 1.0,
+            "name": "oracle"
+          },
+          "pretenured_bytes": 175008,
+          "pretenured_objects": 5384,
+          "remset_adds": 285,
+          "survivor_rate": 0.0848930165087274,
+          "wall_seconds": 0.595
+        }
+      ],
+      "eval_trace": {
+        "bytes_allocated": 1860824,
+        "checkpoints": 1785,
+        "granularity": 1024,
+        "immortal": 5380,
+        "objects": 63421,
+        "survivor_byte_rate": 0.09404865801386912,
+        "survivor_bytes": 175008,
+        "survivor_rate": 0.0848930165087274,
+        "survivors": 5384
+      },
+      "headroom": 589154.3999999999,
+      "model": {
+        "dim": 16384,
+        "nonzero_weights": 202,
+        "pos_weight": 9.951006456513483,
+        "test_metrics": {
+          "accuracy": 0.6669399725642926,
+          "auc": 0.7578365144088082,
+          "base_rate": 0.08487724886078743,
+          "f1": 0.2648522604670588,
+          "fn": 1578,
+          "fp": 19545,
+          "precision": 0.16295503211991436,
+          "recall": 0.7068549136169422,
+          "threshold": 0.3,
+          "tn": 38493,
+          "tp": 3805
+        },
+        "train_metrics": {
+          "accuracy": 0.6529097593119234,
+          "auc": 0.7626111703885848,
+          "base_rate": 0.09131580772698897,
+          "f1": 0.284938553872535,
+          "fn": 639,
+          "fp": 9369,
+          "precision": 0.17548182698231102,
+          "recall": 0.7573110520319027,
+          "threshold": 0.3,
+          "tn": 16832,
+          "tp": 1994
+        }
+      },
+      "n_sites": 29,
+      "name": "doc_pipeline",
+      "policy_family": {
+        "eval_curve": [
+          {
+            "gc_work": 1742547.2,
+            "k": 0.0,
+            "pretenured_bytes": 1860824
+          },
+          {
+            "gc_work": 513910.4,
+            "k": 0.5,
+            "pretenured_bytes": 175136
+          },
+          {
+            "gc_work": 509708.8,
+            "k": 1.0,
+            "pretenured_bytes": 175008
+          },
+          {
+            "gc_work": 509708.8,
+            "k": 2.0,
+            "pretenured_bytes": 175008
+          },
+          {
+            "gc_work": 510618.4,
+            "k": 4.0,
+            "pretenured_bytes": 174864
+          },
+          {
+            "gc_work": 518054.4,
+            "k": 8.0,
+            "pretenured_bytes": 174064
+          }
+        ],
+        "k_oracle": 1.0,
+        "k_star": 4.0,
+        "k_values": [
+          0.0,
+          0.5,
+          1.0,
+          2.0,
+          4.0,
+          8.0
+        ],
+        "profile_curve": [
+          {
+            "gc_work": 478540.0,
+            "k": 0.0,
+            "pretenured_bytes": 825840
+          },
+          {
+            "gc_work": 64536.0,
+            "k": 0.5,
+            "pretenured_bytes": 85840
+          },
+          {
+            "gc_work": 65016.0,
+            "k": 1.0,
+            "pretenured_bytes": 85712
+          },
+          {
+            "gc_work": 65128.0,
+            "k": 2.0,
+            "pretenured_bytes": 85568
+          },
+          {
+            "gc_work": 63624.0,
+            "k": 4.0,
+            "pretenured_bytes": 85296
+          },
+          {
+            "gc_work": 70672.0,
+            "k": 8.0,
+            "pretenured_bytes": 84768
+          }
+        ],
+        "target_bytes": 131072.0
+      },
+      "profile_trace": {
+        "bytes_allocated": 825840,
+        "checkpoints": 790,
+        "granularity": 1024,
+        "immortal": 2631,
+        "objects": 28834,
+        "survivor_byte_rate": 0.10378765862636831,
+        "survivor_bytes": 85712,
+        "survivor_rate": 0.09138517028508011,
+        "survivors": 2635
+      },
+      "recovered": {
+        "gen+always": -1.092555703564295,
+        "gen+learned": -1.6783131892081264,
+        "gen+sitetable": 0.01756279847863303
+      },
+      "sites": [
+        {
+          "detail": "n=0",
+          "function": "@main",
+          "id": 0,
+          "kind": "list",
+          "label": "@main:50 list(n=0)",
+          "line": 50,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 1,
+          "kind": "concat",
+          "label": "@main:55 concat(+)",
+          "line": 55,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 2,
+          "kind": "concat",
+          "label": "@main:56 concat(+)",
+          "line": 56,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 3,
+          "kind": "concat",
+          "label": "@main:56 concat(+)",
+          "line": 56,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 4,
+          "kind": "concat",
+          "label": "@main:57 concat(+)",
+          "line": 57,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 5,
+          "kind": "concat",
+          "label": "@main:58 concat(+)",
+          "line": 58,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "@main",
+          "id": 6,
+          "kind": "native",
+          "label": "@main:60 native(push)",
+          "line": 60,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 7,
+          "kind": "concat",
+          "label": "@main:62 concat(+)",
+          "line": 62,
+          "shape": null
+        },
+        {
+          "detail": "'doc processed '",
+          "function": "@main",
+          "id": 8,
+          "kind": "string",
+          "label": "@main:65 string('doc processed ')",
+          "line": 65,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 9,
+          "kind": "native",
+          "label": "@main:65 native(str)",
+          "line": 65,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 10,
+          "kind": "concat",
+          "label": "@main:65 concat(+)",
+          "line": 65,
+          "shape": null
+        },
+        {
+          "detail": "'doc indexed '",
+          "function": "@main",
+          "id": 11,
+          "kind": "string",
+          "label": "@main:66 string('doc indexed ')",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 12,
+          "kind": "native",
+          "label": "@main:66 native(str)",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 13,
+          "kind": "concat",
+          "label": "@main:66 concat(+)",
+          "line": 66,
+          "shape": null
+        },
+        {
+          "detail": "'doc checksum '",
+          "function": "@main",
+          "id": 14,
+          "kind": "string",
+          "label": "@main:67 string('doc checksum ')",
+          "line": 67,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "@main",
+          "id": 15,
+          "kind": "native",
+          "label": "@main:67 native(str)",
+          "line": 67,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "@main",
+          "id": 16,
+          "kind": "concat",
+          "label": "@main:67 concat(+)",
+          "line": 67,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "rnd",
+          "id": 17,
+          "kind": "concat",
+          "label": "rnd:19 concat(+)",
+          "line": 19,
+          "shape": null
+        },
+        {
+          "detail": "'f'",
+          "function": "make_field",
+          "id": 18,
+          "kind": "string",
+          "label": "make_field:24 string('f')",
+          "line": 24,
+          "shape": null
+        },
+        {
+          "detail": "str",
+          "function": "make_field",
+          "id": 19,
+          "kind": "native",
+          "label": "make_field:24 native(str)",
+          "line": 24,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "make_field",
+          "id": 20,
+          "kind": "concat",
+          "label": "make_field:24 concat(+)",
+          "line": 24,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "make_field",
+          "id": 21,
+          "kind": "record",
+          "label": "make_field:24 record{name,value,tag}",
+          "line": 24,
+          "shape": [
+            "name",
+            "value",
+            "tag"
+          ]
+        },
+        {
+          "detail": "n=0",
+          "function": "make_doc",
+          "id": 22,
+          "kind": "list",
+          "label": "make_doc:28 list(n=0)",
+          "line": 28,
+          "shape": null
+        },
+        {
+          "detail": "push",
+          "function": "make_doc",
+          "id": 23,
+          "kind": "native",
+          "label": "make_doc:31 native(push)",
+          "line": 31,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "make_doc",
+          "id": 24,
+          "kind": "concat",
+          "label": "make_doc:32 concat(+)",
+          "line": 32,
+          "shape": null
+        },
+        {
+          "detail": "",
+          "function": "make_doc",
+          "id": 25,
+          "kind": "record",
+          "label": "make_doc:34 record{id,fields,score}",
+          "line": 34,
+          "shape": [
+            "id",
+            "fields",
+            "score"
+          ]
+        },
+        {
+          "detail": "+",
+          "function": "score_doc",
+          "id": 26,
+          "kind": "concat",
+          "label": "score_doc:42 concat(+)",
+          "line": 42,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "score_doc",
+          "id": 27,
+          "kind": "concat",
+          "label": "score_doc:42 concat(+)",
+          "line": 42,
+          "shape": null
+        },
+        {
+          "detail": "+",
+          "function": "score_doc",
+          "id": 28,
+          "kind": "concat",
+          "label": "score_doc:43 concat(+)",
+          "line": 43,
+          "shape": null
+        }
+      ],
+      "thresholds": {
+        "learned": 0.3,
+        "learned_sweep": [
+          {
+            "gc_work": 649232.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 864107.2,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 930947.2,
+            "threshold": 0.7
+          },
+          {
+            "gc_work": 1132552.8,
+            "threshold": 0.9
+          }
+        ],
+        "sitetable": 0.3,
+        "sitetable_sweep": [
+          {
+            "gc_work": 332736.0,
+            "threshold": 0.3
+          },
+          {
+            "gc_work": 332736.0,
+            "threshold": 0.5
+          },
+          {
+            "gc_work": 338464.0,
+            "threshold": 0.7
+          }
+        ]
+      }
+    }
+  ]
+}
